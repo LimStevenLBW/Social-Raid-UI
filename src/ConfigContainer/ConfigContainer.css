@@ -1,0 +1,250 @@
+.ConfigContainer {
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 65%;
+  margin: auto;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/*The title of a configuration option*/
+.option-heading-light,
+.option-heading-dark {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  color: #767676;
+}
+.option-heading-dark {
+  color: #e2dbf0;
+}
+
+/*The description of a configuration option*/
+.option-info-light,
+.option-info-dark {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #232127;
+}
+.option-info-dark {
+  color: #e5e3e8;
+}
+
+/*Custom descriptive message that the streamer can set*/
+.custom-msg{
+  padding: 5px;
+  width: 99%;
+  background: #f7f7f7;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  border: none;
+}
+
+/*Styling for the total referral counter*/
+.counter-light {
+  font-weight: bold;
+  color: #232127;
+}
+.counter-dark {
+  font-weight: bold;
+  color: #e5e3e8;
+}
+
+/*Styling for the footer of the configuration page*/
+.config-footer {
+  margin-top: 40px;
+}
+
+/*Disables the accessibility outline*/
+button:focus {
+  outline: 0 !important;
+}
+
+/*Styling for a button, currently only for the save-button*/
+.config-button {
+  border: none;
+  border-radius: 5px;
+  background: #6441a4;
+  color: #e5e3e8;
+  height: 42px;
+  line-height: 32px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 20px;
+}
+
+.config-button:hover {
+  background: #2f175e;
+}
+
+.config-button:active {
+  transform: translateY(8px);
+  transition: 0.1s;
+}
+
+/*Message Error Notification*/
+#error-light,
+#error-dark{
+  color: #232127;
+  font-size: 14px;
+  opacity : 0;
+}
+#error-dark{
+  color: #e5e3e8;
+}
+
+/*Styles for the content of a Notification's text content*/
+.notification{
+  color: white;
+}
+
+/*Styles for the Saved Notification*/
+#saved{
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+
+  position: absolute;
+  left: 42%;
+  right: 42%;
+  top: 35%;
+  width: 16%;
+  min-width: 70px;
+  max-width: 120px;
+  height: 20%;
+  min-height: 60px;
+  background: #6441A4;
+  border-radius: 20%;
+  font-size: 22px;
+}
+
+#changelog{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  height: 50%;
+  background: #6441A4;
+  font-size: 14px;
+  z-index: 1;
+  animation: fadein 0.4s;
+  border: 4px solid #2f175e;
+  -moz-animation: fadein 0.4s; /* Firefox */
+  -webkit-animation: fadein 0.4s; /* Safari and Chrome */
+  -o-animation: fadein 0.4s; /* Opera */
+}
+#changelog ul{
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+#version-name{
+  padding-left: 10px;
+  font-size: 18px;
+}
+.support-link{
+  padding-left: 10px;
+}
+/* Unvisited link*/
+.support-link:link {
+  color: #e2dbf0;
+}
+/* Visited link*/
+.support-link:visited {
+  color: #e2dbf0;
+}
+
+/*Hover over link*/
+.support-link:hover {
+  color: #2f175e;
+}
+
+.fadeCycle{
+  animation: fadeCycle 1.4s ease-in forwards;
+}
+
+@keyframes fadeInOut {
+ 0% { opacity:0; }
+ 50% { opacity:1; } 
+ 100% { opacity:0; } 
+}
+/*Animation Styles*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeCycle{
+  0% { opacity: 0; }
+  5%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeCycle{
+  /* Firefox */
+  0% { opacity: 0; }
+ 5%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes fadeCycle{
+  /* Safari and Chrome */
+    0% { opacity: 0; }
+  5%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fadeCycle{
+  /* Opera */
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  100% { opacity: 0; }
+}

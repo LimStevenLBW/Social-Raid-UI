@@ -1,0 +1,352 @@
+/*
+Twitch Official Colors             (Light Mode  vs   Dark Mode)
+Background Color:                White #fff     Twitch Dark Purple #201c2b
+Background Accent:       Twitch Purple #6441A4       Twitch Purple #6441A4
+Default Text:         Twitch Dark Grey #232127   Twitch Light Grey #e5e3e8
+Links: Twitch                   Purple #6441A4 Twitch Light Purple #e2dbf0
+Text Overlays:       Twitch Light Grey #e5e3e8   Twitch Light Grey #e5e3e8
+
+Selected Tab:       Social-Raid Indigo #421596
+Highlight:     Social-Raid Dark Indigo #2f175e
+Leaderboard:   Social-Raid Dark Grey   #4E4D52
+*/
+
+.App {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.App-light {
+  background: white;
+}
+
+.App-dark {
+  background: #201c2b;
+}
+.ShareAll {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*CSS Styles for the Sharing Menu and Referral Generation*/
+body {
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*--------------------------------------------------------*/
+/*Tab Section stylizes the header tabs*/
+.header-tab {
+  display: block;
+  float: left;
+  width: 50%;
+  border: none;
+  background: #6441a4;
+  color: #e5e3e8;
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-tab:hover {
+  background: #2f175e;
+}
+
+.header-tab.active {
+  background: #421596;
+  cursor: default;
+}
+
+/*Disabled by default*/
+#leaderboard {
+  display: none;
+}
+
+/*Disables the accessibility outline*/
+button:focus {
+  outline: 0 !important;
+}
+/*--------------------------------------------------------*/
+
+/*Default Sharing Panel Content
+Controls an holds the main sharing content section by manipulating height and resetting float*/
+.share-panel-light,
+.share-panel-dark {
+  clear: both;
+  height: 200px;
+  background: white;
+}
+.share-panel-dark {
+  background: #201c2b;
+}
+
+/*Leaderboard Content
+Controls an holds the main leaderboard content section by manipulating height and resetting float*/
+.leaderboard-light,
+.leaderboard-dark {
+  clear: both;
+  height: 200px;
+  background: white;
+}
+.leaderboard-dark {
+  background: #4e4d52;
+}
+
+/*Displays a heading at the top of the referral*/
+#referral-header-light,
+#referral-header-dark {
+  display: block;
+  width: 90%;
+  color: #6441a4;
+  font-size: 14px;
+  padding-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5px;
+}
+#referral-header-dark {
+  color: #e5e3e8;
+}
+
+/*Stylizes the text of the referral link*/
+.referral-container {
+  display: block;
+  width: 90%;
+  line-height: 25px;
+  color: grey;
+  border-width: 0px;
+  background: #e5e3e8;
+  padding-left: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3px;
+}
+
+/*Displays a caption below the referral*/
+#referral-caption-light, #referral-caption-dark{
+  display: block;
+  width: 90%;
+  font-size: 13px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#referral-caption-dark{
+  color: #e5e3e8;
+}
+
+/*Contains the copy button and images*/
+#share-options-row {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#share-options-row:after{
+  display: table;
+  clear: both;
+}
+#share-options-column{
+  float: left;
+  width: 33.33%;
+}
+
+/*Stylizes the Share Buttons*/
+.share-button-light,
+.share-button-dark {
+  height: 30px;
+  width: 85px;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6441a4;
+  background-color: white;
+  font-size: 16px;
+  color: #6441a4;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.share-button-dark {
+  border-color: #e2dbf0;
+  background-color: #201c2b;
+  color: #e2dbf0;
+}
+/*Animation on hover*/
+.share-button-light:hover {
+  background-color: #2f175e;
+  color: #e2dbf0;
+}
+.share-button-dark:hover {
+  background-color: #421596;
+}
+.share-button-light:active,
+.share-button-dark:active {
+  transform: translateY(4px);
+  transition: 0.05s;
+}
+
+/*Image Styles, Keeps the images floating to the right side*/
+.social-link{
+  display: block;
+  float: right;
+  text-align: right;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #6441A4;
+  padding: none;
+  width: 30px;
+  height: 30px;
+}
+.social-icon{
+  margin-right: 5px;
+  margin-top: 5px;
+}
+/*Displays a link the user can use to change their name permissions*/
+#change-permissions {
+  position: absolute;
+  top: 215px;
+  right: 4.5%;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* Unvisited link*/
+.link-light:link {
+  color: #6441a4;
+}
+.link-dark:link {
+  color: #e5e3e8;
+}
+/* Visited link*/
+.link-light:visited {
+  color: #6441a4;
+}
+.link-dark:visited {
+  color: #e5e3e8;
+}
+/*Hover over link*/
+.link-light:hover {
+  color: #2f175e;
+}
+.link-dark:hover {
+  color: #e2dbf0;
+}
+
+/*Styles for the permissions dialog and reward explanation overlay*/
+.dialog-overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 42px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+  color: #e5e3e8;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s; /* Firefox */
+  -webkit-animation: fadein 0.4s; /* Safari and Chrome */
+  -o-animation: fadein 0.4s; /* Opera */
+}
+
+.dialog-container {
+  padding: 10px 5px 0px 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  height: 110px;
+}
+.dialog-button {
+  cursor: pointer;
+  border-color: #e2dbf0;
+  background-color: #201c2b;
+  color: #e2dbf0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+}
+.dialog-button:hover {
+  background-color: #2f175e;
+}
+
+/*--------------------------------------------------------*/
+/*Media Styles*/
+
+/* Internet Explorer Compatibility, IE10+ CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  textarea {
+    /*need to hide the textarea, but at the same time, still acquire its text..
+     The copy feature works on internet explorer functionally, but is displayed improperly.
+     This is a stupid but effective work-around.
+     */
+    display: inline;
+    height: 0px;
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
+
+  /*Stylizes the text of the referral link for internet explorer*/
+  .referral-container {
+    display: block;
+    width: 90%;
+    color: grey;
+    border-width: 0px;
+    background: #e5e3e8;
+    padding-left: 3px;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+  }
+}
+
+/*Animation Styles*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,159 @@
+.Leaderboard{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+body{
+  margin: 0px;
+  overflow:hidden;
+}
+
+#scroll-container{
+  height: 110px;
+  overflow: hidden;
+}
+#scroll-helper{
+ overflow: auto;
+ height: 100%;
+}
+
+/*Styles each row of the leaderboard, the header of the Leaderboard also shares this*/
+.row-light, .row-dark {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  background: #f2f2f2;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 3px;
+}
+
+.row-dark{
+  background: #201c2b;
+  color: #e2dbf0;
+}
+
+/*Resets floats and adjusts display*/
+.row-light:after, .row-dark:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Leaderboard Header Labels*/
+.titles-light, .titles-dark{
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #421596;
+}
+.titles-dark{
+  color: #e2dbf0;
+}
+.column{
+  float: left;
+}
+
+/*left column*/
+.rank{
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+}
+
+/*Center column*/
+.user{
+  display: inline-block;
+  width: 65%;
+  padding-left: 10px;
+
+}
+
+/*Referral count column*/
+.score{
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+}
+
+.leaderboard-footer-light, .leaderboard-footer-dark{
+  padding-top: 1px;
+  padding-bottom: 7px;
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.leaderboard-footer-dark{
+  background: #201c2b;
+}
+
+/*The folowing code handles the styles and theme variations for the bottom filter buttons*/
+.filter-tab{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-button-light, .filter-button-dark{
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #4E4D52;
+}
+
+.filter-button-dark{
+  color: #e2dbf0;
+}
+
+.filter-button-light:hover, .filter-button-dark:hover{
+  color: #6441A4;
+  cursor: pointer;
+}
+
+.filter-button-dark:hover{
+  color: white;
+}
+
+.filter-button-light.active, .filter-button-dark.active{
+  border-bottom: 2px solid #6441A4;
+  cursor: default;
+}
+
+.filter-button-dark.active{
+  border-bottom: 2px solid #e2dbf0;
+}
+
+/*Styles the display for the user icon*/
+.avatar-light, .avatar-dark{
+  display: block;
+  border: 1.5px solid #6441A4;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  text-align: center;
+}
+.avatar-dark{
+  border: 1.5px solid #e2dbf0;
+}
+
+/*Leaderboard row users*/
+.row-img-light, .row-img-dark{
+  display: inline-block;
+  float: left;
+  border: 1px solid #6441A4;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+.row-img-dark{
+  border: 1px solid #e2dbf0;
+}
+
+.refCount-light, .refCount-dark{
+  text-align: center;
+  color: #232127;
+}
+.refCount-dark{
+  color: #e2dbf0
+}
